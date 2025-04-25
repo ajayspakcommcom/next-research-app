@@ -1,0 +1,45 @@
+my-enterprise-app/
+├── public/                        # Static assets (images, fonts, etc.)
+├── src/
+│   ├── app/                       # App Router Pages and Routes
+│   │   ├── api/                   # API routes (Next.js Server Actions)
+│   │   │   └── auth/              # e.g. next-auth handlers
+│   │   │       └── [...nextauth]/route.ts
+│   │   ├── dashboard/             # Nested routes (feature module)
+│   │   │   ├── page.tsx
+│   │   │   └── layout.tsx
+│   │   ├── layout.tsx            # Root layout
+│   │   ├── page.tsx              # Home page
+│   │   └── globals.css
+│   │
+│   ├── components/               # Reusable UI components
+│   │   ├── ui/                   # Atomic/shared components (Button, Input)
+│   │   └── layout/               # Header, Sidebar, Footer, etc.
+│   │
+│   ├── features/                 # Business logic modules (domain-based)
+│   │   ├── auth/                 # Authentication logic
+│   │   ├── user/                 # User CRUD
+│   │   └── product/              # Product-related logic
+│   │
+│   ├── lib/                      # Shared utilities & helpers
+│   │   ├── api.ts                # Axios/fetch instance
+│   │   └── auth.ts               # Auth utilities
+│   │
+│   ├── services/                 # Data access layer (API or DB calls)
+│   │   ├── userService.ts
+│   │   └── productService.ts
+│   │
+│   ├── hooks/                    # Custom React hooks
+│   ├── context/                  # React Context providers (Auth, Theme)
+│   ├── constants/                # Constants and enums
+│   ├── types/                    # TypeScript types and interfaces
+│   ├── config/                   # App configs (env, theming)
+│   ├── middleware.ts             # Middleware (e.g. auth guard)
+│   └── styles/                   # Custom CSS/SCSS or Tailwind configs
+│
+├── .env.local                    # Local environment variables
+├── .gitignore
+├── next.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
